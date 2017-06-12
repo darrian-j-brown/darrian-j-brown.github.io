@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #3e8e41;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover {background-color: #f1f1f1}
+
+.show {display:block;}
+</style>
+</head>
+<body>
+
+
+
+<div class="dropdown">
+<button onclick="myFunction()" class="dropbtn">Story</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="#story"><p>An elderly man in Louisiana owned a large farm for several years. 
+He had a large pond in the back. It was properly shaped for swimming, so he fixed it up nice with picnic tables, horseshoe  courts, and some apple and peach trees.
+One evening the old farmer decided to go down to the pond, to look it over, as he hadn't been there for a while.
+Before he went, he grabbed a five-gallon bucket to bring back some fruit.
+As he neared the pond, he heard voices shouting and laughing with glee. As he got closer, he saw it was a bunch of young women skinny-dipping in his pond. 
+He made the women aware of his presence and they all went to the deep end.
+One of the women shouted to him, "We're not coming out until you leave!" 
+The old man replied, "I didn't come down here to watch you ladies swim naked or make you get out of the pond naked."
+Holding the bucket up, he said... "I'm here to feed the alligator!"
+Some old men can still think fast.</p></a>
+</div>
+
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+
+</body>
+</html>

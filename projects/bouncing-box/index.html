@@ -11,15 +11,31 @@
 		[class="box"] {
 			display: block;
 			position: absolute;
-			width: 70px;
-			height: 70px;
+			width: 190px;
+			height: 250px;
 			top: 100px;
 			left: 0px;
-			background-color: blue;
 			font-size: 300%;
 			text-align: center;
-			background-image: url("image http://www.officialpsds.com/images/thumbs/Silver-Skull-psd107840.png");
+			background-image: url("http://www.freeiconspng.com/uploads/letter-l-icon-png-5.png");
+			image-scale: 5px;
+			color:white;
+			
 		}
+		
+		header {
+			font-size: 20px;
+			text-align: center;
+			color:white;
+			
+		}
+		body {
+			background-color: blue;
+			background-image: url("https://www.postojnska-jama.eu/assets/Za-pustolovce/Pivka-in-Crna-jama/_resampled/SetWidth1280-dozivjajski-ogled-2.JPG");
+			
+		}
+		
+		
 	</style>
 
 </head>
@@ -47,14 +63,14 @@
 			var position;
 			var points;
 			var speed;
-			var direction;
+			
 			
 			position = 0;
 			points = 0;
 			speed = 10;
 			direction = 1;
 			box.css('left', position);
-				box.text(points);
+			box.text(points);
 
 			// TODO 3 / 4
 			update = function() {
@@ -66,9 +82,12 @@
     			} else if (position < 0) {
 					direction = 1;
 				}
+				
     			box.css('left', position);
+    			box.text(points);
 			};
-
+			
+	
 
 			// TODO 5 / 6
 			handleBoxClick = function() {
@@ -82,7 +101,9 @@
 			setInterval(update, 50);
 			// this calls the handle handleBoxClick function every time the box is clicked on
 			box.on('click', handleBoxClick);
-		})()
+		})();
 	</script>
+	<header>So you came into this cave to find some. Let me guess you came for some gold or something like that or maybe the new xbox hmm?. well sorry to tell you but the stuff your looking for yea it aint here buddy but whats here is this L and you finna take it</header>
+	
 </body>
 </html>
