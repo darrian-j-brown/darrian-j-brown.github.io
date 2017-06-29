@@ -23,6 +23,10 @@
         
         <style type="text/css">
             /*override default styles here*/
+            body {
+                background-color:orange;
+            }
+            
         </style>
     </head>
     <body>
@@ -53,7 +57,7 @@
                 i = 0;
             circles = [];
                 
-                       while (i < 100) {
+                       while (i < 1000) {
                     // TODO 3 : YOUR CODE STARTS HERE //////////////////////////
                     
                     circle = draw.randomCircleInArea(canvas, true, true, '#999', 2);
@@ -98,7 +102,7 @@
                         if (circle.x > canvas.width + circle.radius) {
                             circle.x = 0;
                             // your code to place circle exactly off the stage at the left-side //
-                        } else if (circle.x === 0) {
+                        } else if (circle.x < 0) {
                             circle.x = canvas.width;
                             // your code to place circle exactly off the stage at the right-side //
                         }
@@ -106,7 +110,7 @@
                         if (circle.y > canvas.height + circle.radius) {
                             circle.y = 0;
                             // code to place circle exactly off the stage at the bottom //
-                        } else if (circle.y === 0 ) {
+                        } else if (circle.y < 0 ) {
                             circle.y  = canvas.height
                             // your code to place circle exactly off the stage at the top //
                         }
